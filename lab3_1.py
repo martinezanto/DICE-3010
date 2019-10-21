@@ -2,11 +2,14 @@ def sums():
    
    #TODO: Initialize a variable called first_sum and store the sum of 
    # 2 and 2
+   first_sum = 2 + 2
 
    #TODO: Store to first_sum the value of first_sum times 10
+   first_sum = first_sum * 10
 
    #TODO: Initialize a variable called secret and assign it the value 
    # of first_sum plus 2
+   secret = first_sum + 2
 
    return secret
 
@@ -14,13 +17,15 @@ def string_manip(first_name):
 
    # TODO: Initialize a variable called name and assign it the 
    # parameter.
+   name  = first_name
+
 
    # TODO: Use builtin string functions and slices to replace None with 
    # the appropriate manipulation of your name. I've done the first one.
    all_caps = name.upper()
-   all_lowercase = None
-   first_five_letters = None
-   last_two_letters = None
+   all_lowercase = name.lower()
+   first_five_letters = name[:5]
+   last_two_letters = name[-2:]
 
    return [all_caps, all_lowercase, first_five_letters, last_two_letters]
 
@@ -45,6 +50,7 @@ def equitable_bill_splitter():
    
    # TODO: Read the following code and add comments to each line explaining what
    # it does. To write a comment, begin the line with an octothorpe (hashtag, #)
+   # ask user for input, convert input into integer, and store in variable called people.
    people = int(input("How many people are paying? "))
    salaries = []
    total = 0
