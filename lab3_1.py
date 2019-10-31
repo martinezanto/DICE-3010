@@ -36,31 +36,33 @@ def greeter_bot():
    # I have started it for you, but you need to modify the input and 
    # print functions.
    # Hint: to get the test to pass, the greeting should be "Hello, input name"
-   fname = input()
-   print()
+   fname = input("Hello, input name.")
+   print(fname)
 
 def temp_calculator():
 
    # TODO: Write code that prompts the user for a temperature in degrees
    # fahrenheit and prints the equivalent temperature in degrees celsius.
    # The formula is C = (F - 32) * (5/9). 
-   print()
+   fahrenheit = float(input("Enter temperature in fahrenheit: "))
+   celsius = (fahrenheit - 32) * 5/9
+   print('%.2f Fahrenheit is: %0.2f Celsius' %(fahrenheit, celsius))
 
 def equitable_bill_splitter():
    
    # TODO: Read the following code and add comments to each line explaining what
    # it does. To write a comment, begin the line with an octothorpe (hashtag, #)
    # ask user for input, convert input into integer, and store in variable called people.
-   people = int(input("How many people are paying? "))
-   salaries = []
-   total = 0
+   people = int(input("How many people are paying? ")) #Assigning the variable "people" a number inputted by the user.
+   salaries = [] #print values in salaries
+   total = 0 #Assiging the variable "total" to 0.
+    
+   for i in range(people): #Run a loop of all people.
+      sal = int(input("What is the salary of person {}?".format(i+1))) #"sal" is a variable for salary and it asks user what the salary of each person is.
+      total += sal #Add what this person makes to the total salary of everyone.
+      salaries.append(sal) #Update value to existing list.
    
-   for i in range(people):
-      sal = int(input("What is the salary of person {}?".format(i+1)))
-      total += sal
-      salaries.append(sal)
+   total_bill = int(input("How much is the bill? ")) #Defining the varaible "total_bill" the cost of the bill, which is input by user.
    
-   total_bill = int(input("How much is the bill? "))
-   
-   for j in range(len(salaries)):
-      print("Person {} should pay ${}\n".format(j + 1, round((total_bill * (salaries[j]/total)), 2)))
+   for j in range(len(salaries)): #Run loop for the salaries.
+      print("Person {} should pay ${}\n".format(j + 1, round((total_bill * (salaries[j]/total)), 2))) #Give me the total for each person to pay.
