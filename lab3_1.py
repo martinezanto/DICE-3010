@@ -36,17 +36,23 @@ def greeter_bot():
    # I have started it for you, but you need to modify the input and 
    # print functions.
    # Hint: to get the test to pass, the greeting should be "Hello, input name"
-   fname = input("Hello, input name.")
-   print(fname)
+   name = input("Hi, friend! What is your name?") # Changed syntax, to match video.
+   print("Hello, {}!".format(name)) #Added everything after hello.
 
 def temp_calculator():
 
    # TODO: Write code that prompts the user for a temperature in degrees
    # fahrenheit and prints the equivalent temperature in degrees celsius.
    # The formula is C = (F - 32) * (5/9). 
-   fahrenheit = float(input("Enter temperature in fahrenheit: "))
-   celsius = (fahrenheit - 32) * 5/9
-   print('%.2f Fahrenheit is: %0.2f Celsius' %(fahrenheit, celsius))
+   temp_f = float(input("What is the temperature in Fahrenheit?"))
+   temp_c = (temp_f -32) * last_two_letters(5/9)
+   print(temp_c)
+
+
+   #Old Code:
+  # fahrenheit = float(input("Enter temperature in fahrenheit: "))
+   #celsius = (fahrenheit - 32) * 5/9
+  # print('%.2f Fahrenheit is: %0.2f Celsius' %(fahrenheit, celsius))
 
 def equitable_bill_splitter():
    
